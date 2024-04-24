@@ -11,13 +11,15 @@ class Player:
         self.x, self.y = player['defaultPosition']
         self.size = size['player']
         self.rotation = 0
+        self.alive = True
         self.trail = Trail(color)
 
 
     def move(self):
         self.x += math.sin(self.rotation) * player["speed"]
         self.y += math.cos(self.rotation) * player["speed"]
-
+        
+        self.checkCollision()
         self.trail.addPoint(self.x, self.y)
 
     def rotate(self, right = True):
@@ -26,10 +28,11 @@ class Player:
 
     def draw(self, screen):
         pygame.draw.circle(screen, self.color, (self.x, self.y), self.size)
-        self.checkCollision(screen)
 
-    def checkCollision(self, screen):
-        color = screen.get_at((int(self.x), int(self.y)))
+    def checkCollision(self):
+        if self.trail.points[self.x] == self.y:
+            print("Kolizja!")
+        
 
 
     

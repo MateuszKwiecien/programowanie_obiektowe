@@ -4,16 +4,18 @@ from constants import colors, trail
 class Trail:
     def __init__(self, color: str):
         self.color = colors[color+"-trail"]
-        self.points = []
+        self.points = {}
+        self.lastPoints = []
 
     def addPoint(self, x, y):
-        self.points.append((x,y))
+        self.points[x] = y
+        self.lastPoints.append((x,y))
 
     def resetPoints(self):
         self.points = []
 
     def draw(self, screen):
-        if len(self.points) < 2: return
+        if len(self.lastPoints) < 2: return
 
-        lastPoints = self.points[-2:]
-        pygame.draw.line(screen, self.color, lastPoints[0], lastPoints[1], trail["width"])
+        pygame.draw.line(screen, self.color, self.lastPoints[0], self.lastPoints[1], trail["width"])
+        self.lastPoints.pop(0)

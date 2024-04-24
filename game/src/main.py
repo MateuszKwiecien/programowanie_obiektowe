@@ -38,6 +38,8 @@ def main():
         controlls.handleClick()
         screen.fill(colors["white"])
         
+        # player1.checkCollision(trail_surface)
+        
         player1.trail.draw(trail_surface)
         player1.draw(screen)
         screen.blit(trail_surface, (0,0))
