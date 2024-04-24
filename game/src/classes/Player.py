@@ -30,7 +30,6 @@ class Player:
 
     def checkCollision(self, screen):
         color = screen.get_at((int(self.x), int(self.y)))
-        print(color)
 
 
     

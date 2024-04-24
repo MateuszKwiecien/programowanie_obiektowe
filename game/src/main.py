@@ -23,8 +23,9 @@ def main():
 
     # Main game loop
     running = True
-    renderPhase = 0
+    clock = pygame.time.Clock()
     while running:
+        clock.tick(60)
         # Event handling
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
