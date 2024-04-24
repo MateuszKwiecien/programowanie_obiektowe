@@ -6,8 +6,7 @@ from constants import size, player
 class Player:
     def __init__(self, color: str):
         self.color = color
-        self.x = 0
-        self.y = 0
+        self.x, self.y = player['defaultPosition']
         self.size = size['player']
         self.rotation = 0
 
