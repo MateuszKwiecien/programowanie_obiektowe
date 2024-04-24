@@ -30,9 +30,8 @@ class Player:
         pygame.draw.circle(screen, self.color, (self.x, self.y), self.size)
 
     def checkCollision(self):
-        if self.trail.points[self.x] == self.y:
-            print("Kolizja!")
-        
+        print(self.trail.points.get(int(self.x)), int(self.y))
+    
 
 
     

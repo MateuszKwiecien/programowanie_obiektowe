@@ -8,8 +8,8 @@ class Trail:
         self.lastPoints = []
 
     def addPoint(self, x, y):
-        self.points[x] = y
-        self.lastPoints.append((x,y))
+        self.points[int(x*10)] = int(y*10)
+        self.lastPoints.append((int(x),int(y)))
 
     def resetPoints(self):
         self.points = []
