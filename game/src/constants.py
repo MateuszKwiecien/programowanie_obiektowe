@@ -15,7 +15,8 @@ size = {
 
 player = {
     "speed": 0.05,
-    "rotation": (math.pi / 180) / 10
+    "rotation": (math.pi / 180) / 10,
+    "defaultPosition" : (size['plane']['width']/2, size['plane']['height']/2)
 }
 
 

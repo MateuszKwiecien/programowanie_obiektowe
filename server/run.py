@@ -1,4 +1,3 @@
-
 import uvicorn
 from src.main import app, sio
 from constants import PORT, HOST
