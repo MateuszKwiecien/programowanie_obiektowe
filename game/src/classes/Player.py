@@ -8,8 +8,7 @@ from constants import size, player, colors
 class Player:
     def __init__(self, color: str):
         self.color = colors[color]
-        self.x = 50
-        self.y = 50
+        self.x, self.y = player['defaultPosition']
         self.size = size['player']
         self.rotation = 0
         self.trail = Trail(color)
