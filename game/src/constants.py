@@ -1,0 +1,43 @@
+import math
+
+game = {
+    "delay": 100
+}
+
+colors = {
+    "white": (255,255,255),
+    "red": (255, 0, 0),
+    "red-base": (200, 0, 0),
+    "red-trail": (140, 0, 0)
+}
+
+size = {
+    "plane": {
+        "width": 800,
+        "height": 600
+    },
+    "player": 10
+}
+
+player = {
+    "speed": 2,
+    "rotation": (math.pi / 180)*3,
+    "defaultPosition" : (size['plane']['width']/2, size['plane']['height']/2)
+}
+
+base = {
+    "initial": {
+        "width": 200,
+        "height": 200
+    },
+    "positions": [
+        [50,50]
+    ]
+}
+
+trail = {
+    "width": 5
+}
+
+
+
